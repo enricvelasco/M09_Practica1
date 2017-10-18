@@ -12,8 +12,6 @@ import java.util.concurrent.Callable;
 public class BuscaAlumne implements Callable {
     private int codiAlumne;
     private ArrayList<Alumne> llistaAlumnes;
-    //private Alumne resposta;
-
 
     public BuscaAlumne(int codiAlumne, ArrayList<Alumne> llistaAlumnes) {
         this.codiAlumne = codiAlumne;
@@ -21,14 +19,6 @@ public class BuscaAlumne implements Callable {
     }
 
     public BuscaAlumne() {
-    }
-
-    public ArrayList<Alumne> getLlistaAlumnes() {
-        return llistaAlumnes;
-    }
-
-    public void setLlistaAlumnes(ArrayList<Alumne> llistaAlumnes) {
-        this.llistaAlumnes = llistaAlumnes;
     }
 
     @Override

@@ -16,6 +16,7 @@ public class GestioNotes {
 
     public static void main(String[] args){
         Alumne alumneResposta;
+        
         //Crear la lista de alumnos
         CreaAlumnes ca = new CreaAlumnes();
         ArrayList<Alumne> llistaAlumnat = ca.obtenirLlistat();
@@ -24,12 +25,14 @@ public class GestioNotes {
         }
         System.out.println("Llista creada");
 
+        //pide la entrada de codigo
         Scanner entrada=new Scanner(System.in);
         System.out.print("Ingrese un codigo (sin espacios): ");
-
         int codigoIntroducido = entrada.nextInt();
 
+        //distinngue la cantidad de alumnos
         if(llistaAlumnat.size() >= 10){
+            //ejecuta el thread
             ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
             Future resposta = executor.submit(new BuscaAlumne(codigoIntroducido, llistaAlumnat));
             while (!resposta.isDone()) {
