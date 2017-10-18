@@ -16,7 +16,7 @@ public class GestioNotes {
 
     public static void main(String[] args){
         Alumne alumneResposta;
-        
+
         //Crear la lista de alumnos
         CreaAlumnes ca = new CreaAlumnes();
         ArrayList<Alumne> llistaAlumnat = ca.obtenirLlistat();
