@@ -12,8 +12,6 @@ public class CreaAlumnes {
         for (int i = 1; i <= 100000; i++) {
             Alumne al= new Alumne(i,r.nextDouble()*10);
             alumnat.add(al);
-
-
         }
         Collections.shuffle(alumnat);
         return alumnat;
